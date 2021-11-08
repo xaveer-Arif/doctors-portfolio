@@ -5,6 +5,7 @@ import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Login/Register';
 import AuthProvider from './Pages/Context/AuthProvider';
+import Appointment from './Pages/Appointment/Appointment';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
         </Route>
         <Route path = '/home'>
           <Home></Home>
+        </Route>
+        <Route path = '/appointment'>
+          <Appointment></Appointment>
         </Route>
         <Route path = '/login'>
           <Login></Login>

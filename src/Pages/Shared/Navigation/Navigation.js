@@ -29,7 +29,10 @@ const Navigation = () => {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               Doctors Portatall
             </Typography>
-            {user.email ?    
+            <Link to = '/appointment'>
+            <Button style = {{textDecoration : 'none', color: 'white'}} color="inherit">Appointment</Button>
+            </Link>
+           {user.email ?    
                 <Button onClick = {logOut} style = {{textDecoration : 'none', color: 'white'}} >LogOut</Button>
            
             :<Link to = '/login'>     
