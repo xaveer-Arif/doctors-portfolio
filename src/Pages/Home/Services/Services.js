@@ -40,10 +40,10 @@ const Services = () => {
         <Box sx={{ flexGrow: 1 }}>
            <Typography variant="h5" component="h2" sx = {{fontWeight:'bold'}}>
                Our Services
-            </Typography>;
+            </Typography>
            <Typography variant="h3" component="h2">
                Services We Provided
-            </Typography>;
+            </Typography>
 
       <Grid container  spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
         {

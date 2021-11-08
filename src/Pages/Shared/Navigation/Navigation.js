@@ -6,9 +6,12 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
 
 
 const Navigation = () => {
+  const {user, logOut} = useAuth()
    
     return (
         <Box sx={{ flexGrow: 1 }}>
@@ -26,7 +29,12 @@ const Navigation = () => {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               Doctors Portatall
             </Typography>
-            <Button color="inherit">Login</Button>
+            {user.email ?    
+                <Button onClick = {logOut} style = {{textDecoration : 'none', color: 'white'}} >LogOut</Button>
+           
+            :<Link to = '/login'>     
+                <Button style = {{textDecoration : 'none', color: 'white'}} color="inherit">Login</Button>
+            </Link>}
           </Toolbar>
         </AppBar>
       </Box>
